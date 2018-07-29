@@ -1,4 +1,4 @@
-package jp.egg.fried.mytwitter
+package jp.egg.fried.soundrecorderlight
 
 import org.junit.Test
 
