@@ -1,17 +1,19 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
 
+def VERSION_CODE = 1
+def PRODUCTION_VERSION_NAME = "1.0"
+
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
+    buildToolsVersion '28.0.2'
     defaultConfig {
         applicationId "jp.egg.fried.soundrecorderlight"
-        minSdkVersion 15
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode VERSION_CODE
+        versionName PRODUCTION_VERSION_NAME
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -27,11 +29,20 @@ android {
 }
 
 dependencies {
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // support library
+    implementation "com.android.support:appcompat-v7:27.1.1"
+    implementation "com.android.support:design:27.1.1"
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation "com.android.support:design:26.1.0"
+
+    // Kodein
+    implementation 'com.github.salomonbrys.kodein:kodein:4.0.0'
+    implementation 'com.github.salomonbrys.kodein:kodein-android:4.1.0'
+
+    // Test
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

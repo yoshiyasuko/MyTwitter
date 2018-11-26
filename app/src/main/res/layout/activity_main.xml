@@ -7,7 +7,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="jp.egg.fried.soundrecorderlight.view.activity.MainActivity">
+        tools:context=".presentation.view.activity.MainActivity">
 
         <FrameLayout
             android:id="@+id/container_base"

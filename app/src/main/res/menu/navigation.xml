@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/file"
+        android:id="@+id/navigation_file"
         android:icon="@drawable/ic_menu_file"
         android:title="@string/menu_tab_name_file" />
 
     <item
-        android:id="@+id/record"
+        android:id="@+id/navigation_record"
         android:icon="@drawable/ic_menu_record"
         android:title="@string/menu_tab_name_record" />
 
     <item
-        android:id="@+id/setting"
+        android:id="@+id/navigation_setting"
         android:icon="@drawable/ic_menu_settings"
         android:title="@string/menu_tab_name_setting" />
 
