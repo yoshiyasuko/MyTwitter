@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity()
     override lateinit var navigator: Navigator
     //endregion
 
+
+    //region: override AppCompatActivity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,5 +23,7 @@ class MainActivity : AppCompatActivity()
         navigator = NavigatorImpl(this)
         navigator.navigationView = findViewById(R.id.navigation)
         navigator.onCreate(applicationContext)
+        navigator.start()
     }
+    //endregion
 }

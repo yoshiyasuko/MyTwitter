@@ -34,7 +34,7 @@ class NavigationFragment : Fragment() {
         }
     private val delayExecutionQueue: MutableList<Runnable> = mutableListOf()
 
-    lateinit var binding: FragmentNavigationBinding
+    private lateinit var binding: FragmentNavigationBinding
     //endregion
 
 

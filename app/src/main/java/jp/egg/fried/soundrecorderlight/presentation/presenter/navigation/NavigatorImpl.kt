@@ -1,6 +1,9 @@
 package jp.egg.fried.soundrecorderlight.presentation.presenter.navigation
 
+import android.annotation.SuppressLint
 import android.content.Context
+import android.support.design.internal.BottomNavigationItemView
+import android.support.design.internal.BottomNavigationMenuView
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
@@ -27,8 +30,8 @@ class NavigatorImpl(private val activity: AppCompatActivity)
     //region: initializer
     init {
         navigationFragments.add(NavigationFragment().setTab(Tab.FILE))
-        navigationFragments.add(NavigationFragment().setTab(Tab.SETTING))
         navigationFragments.add(NavigationFragment().setTab(Tab.RECORD))
+        navigationFragments.add(NavigationFragment().setTab(Tab.SETTING))
     }
     //endregion
 
@@ -56,6 +59,9 @@ class NavigatorImpl(private val activity: AppCompatActivity)
 
         isStarted = true
 
+        // 一旦ファイルタブのFragmentをcurrentFragmentに載せる必要があるので、ファイル→録音へと遷移させる
+        changeTabVisible(Tab.RECORD)
+        changeNavigationFragment(Tab.FILE)
         changeNavigationFragment(Tab.RECORD)
     }
 
@@ -97,7 +103,19 @@ class NavigatorImpl(private val activity: AppCompatActivity)
 
 
     //region: private methods
+    @SuppressLint("RestrictedApi")
     private fun setupNavigationView() {
+
+        // BottomNavigationViewのShiftingModeをonにする
+        navigationView?.let { navigationView ->
+            val menuView = navigationView.getChildAt(0) as BottomNavigationMenuView
+            (0 until menuView.childCount).forEach {
+                val itemView = menuView.getChildAt(it) as BottomNavigationItemView
+                itemView.setShiftingMode(true)
+            }
+        }
+
+        // BottomNavigationItemをタップした時の処理をリスナにセットする
         navigationView?.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_file -> {
