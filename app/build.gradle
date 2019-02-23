@@ -42,6 +42,10 @@ dependencies {
     implementation 'com.github.salomonbrys.kodein:kodein:4.1.0'
     implementation 'com.github.salomonbrys.kodein:kodein-android:4.1.0'
 
+    // Groupie
+    implementation 'com.xwray:groupie:2.3.0'
+    implementation 'com.xwray:groupie-databinding:2.3.0'
+
     // Test
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.2-alpha01'
