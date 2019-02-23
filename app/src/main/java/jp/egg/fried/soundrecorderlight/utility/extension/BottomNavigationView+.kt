@@ -1,7 +1,7 @@
 package jp.egg.fried.soundrecorderlight.utility.extension
 
 import android.content.Context
-import android.support.design.widget.BottomNavigationView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation

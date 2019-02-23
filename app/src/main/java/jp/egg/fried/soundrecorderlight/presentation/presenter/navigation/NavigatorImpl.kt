@@ -2,11 +2,11 @@ package jp.egg.fried.soundrecorderlight.presentation.presenter.navigation
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.support.design.internal.BottomNavigationItemView
-import android.support.design.internal.BottomNavigationMenuView
-import android.support.design.widget.BottomNavigationView
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
 import jp.egg.fried.soundrecorderlight.R
 import jp.egg.fried.soundrecorderlight.presentation.view.fragment.navigation.NavigationFragment
 import jp.egg.fried.soundrecorderlight.utility.extension.show
@@ -111,7 +111,7 @@ class NavigatorImpl(private val activity: AppCompatActivity)
             val menuView = navigationView.getChildAt(0) as BottomNavigationMenuView
             (0 until menuView.childCount).forEach {
                 val itemView = menuView.getChildAt(it) as BottomNavigationItemView
-                itemView.setShiftingMode(true)
+                itemView.setShifting(true)
             }
         }
 

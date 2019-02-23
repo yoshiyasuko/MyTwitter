@@ -1,6 +1,6 @@
 package jp.egg.fried.soundrecorderlight.presentation.view.activity
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import jp.egg.fried.soundrecorderlight.R
 import jp.egg.fried.soundrecorderlight.presentation.presenter.navigation.Navigator

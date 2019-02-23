@@ -1,6 +1,6 @@
 package jp.egg.fried.soundrecorderlight.utility.extension
 
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import jp.egg.fried.soundrecorderlight.presentation.presenter.navigation.Navigator
 
 
