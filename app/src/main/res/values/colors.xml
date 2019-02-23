@@ -6,5 +6,27 @@
     <color name="clearPurple">#c088ff</color>
     <color name="purple">#9635ff</color>
 
+    <color name="background">#E4E5E6</color>
+    <color name="blackButton">#101820</color>
+    <color name="borderLine">#C9CBCD</color>
+    <color name="clear">#00000000</color>
+    <color name="darkBlue">#003057</color>
+    <color name="darkGray">#5F646A</color>
+    <color name="darkGrayText">#7A7F83</color>
+    <color name="gradientBottom">#66000000</color>
+    <color name="gradientTop">#00000000</color>
+    <color name="header">#F2F2F2</color>
+    <color name="lightGray">#AFB2B4</color>
+    <color name="lightGrayText">#94989C</color>
+    <color name="lightGreen">#9BE3BF</color>
+    <color name="normalText">#454B52</color>
+    <color name="placeholder">#C7C7CD</color>
+    <color name="sale">#FF5C39</color>
+    <color name="soldout">#9BCBEB</color>
+    <color name="strongText">#2A3139</color>
+    <color name="textField">#646464</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFC845</color>
+
 
 </resources>
