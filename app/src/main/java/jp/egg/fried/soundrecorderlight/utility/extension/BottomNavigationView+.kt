@@ -1,16 +1,16 @@
 package jp.egg.fried.soundrecorderlight.utility.extension
 
 import android.content.Context
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.Transformation
 import android.widget.FrameLayout
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import jp.egg.fried.soundrecorderlight.R
 
 fun BottomNavigationView.show(show: Boolean, animation: Boolean, changeVisibility: Boolean) {
-    val containerView = (parent as? ViewGroup)?.findViewById<View>(R.id.container_base)
+    val containerView = (parent as? ViewGroup)?.findViewById<View>(R.id.containerBase)
     val navigationHeight = height
 
     if (animation) {
@@ -39,6 +39,7 @@ fun BottomNavigationView.show(show: Boolean, animation: Boolean, changeVisibilit
                         override fun onAnimationEnd(p0: Animation?) {
                             visibility = View.GONE
                         }
+
                         override fun onAnimationRepeat(p0: Animation?) = Unit
                         override fun onAnimationStart(p0: Animation?) = Unit
                     })
@@ -67,4 +68,4 @@ fun BottomNavigationView.show(show: Boolean, animation: Boolean, changeVisibilit
 }
 
 private fun duration(context: Context): Long =
-        context.resources.getInteger(R.integer.bottom_navigation_view_slide_duration).toLong()
+    context.resources.getInteger(R.integer.bottom_navigation_view_slide_duration).toLong()
