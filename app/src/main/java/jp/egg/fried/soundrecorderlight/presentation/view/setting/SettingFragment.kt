@@ -12,7 +12,7 @@ import com.xwray.groupie.ViewHolder
 import jp.egg.fried.soundrecorderlight.R
 import jp.egg.fried.soundrecorderlight.databinding.FragmentSettingBinding
 import jp.egg.fried.soundrecorderlight.presentation.view.item.decoration.SimpleItemDecoration
-import jp.egg.fried.soundrecorderlight.presentation.view.item.setting.SettingRowItem
+import jp.egg.fried.soundrecorderlight.presentation.view.item.setting.SettingRowWithSwitchItem
 import jp.egg.fried.soundrecorderlight.utility.extension.updateToolbar
 
 
@@ -58,7 +58,7 @@ class SettingFragment : Fragment() {
     //region: private methods
     private fun bindItems() {
         val items = (0 until 20).map {
-            SettingRowItem("設定${it + 1}", "設定の説明${it + 1}")
+            SettingRowWithSwitchItem("設定${it + 1}", "設定の説明${it + 1}")
         }
 
         groupAdapter.update(items)

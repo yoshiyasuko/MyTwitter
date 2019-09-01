@@ -7,12 +7,12 @@ import jp.egg.fried.soundrecorderlight.databinding.ItemSettingRowViewBinding
 
 
 /**
- * SettingRowItem
+ * SettingRowWithSwitchItem
  *
  * Created by Yoshiyasu on 2019-09-01
  */
 
-class SettingRowItem(
+class SettingRowWithSwitchItem(
     private val content: String,
     private val description: String? = null
 ) : BindableItem<ItemSettingRowViewBinding>() {
