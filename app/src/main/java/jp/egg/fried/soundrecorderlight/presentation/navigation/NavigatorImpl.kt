@@ -1,4 +1,4 @@
-package jp.egg.fried.soundrecorderlight.presentation.presenter.navigation
+package jp.egg.fried.soundrecorderlight.presentation.navigation
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -8,7 +8,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import jp.egg.fried.soundrecorderlight.R
-import jp.egg.fried.soundrecorderlight.presentation.view.fragment.navigation.NavigationFragment
+import jp.egg.fried.soundrecorderlight.presentation.view.navigation.NavigationFragment
 import jp.egg.fried.soundrecorderlight.utility.extension.show
 import java.io.Serializable
 
@@ -168,17 +168,17 @@ class NavigatorImpl(private val activity: AppCompatActivity)
 
         // 新しいFragmentへの遷移処理
         val transaction = activity.supportFragmentManager.beginTransaction()
-        currentTab?.let {
-            when {
-                it.ordinal > tab.ordinal -> {
-                    transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right)
-                }
-                it.ordinal < tab.ordinal -> {
-                    transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
-                }
-                else -> Unit
-            }
-        }
+//        currentTab?.let {
+//            when {
+//                it.ordinal > tab.ordinal -> {
+//                    transaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right)
+//                }
+//                it.ordinal < tab.ordinal -> {
+//                    transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left)
+//                }
+//                else -> Unit
+//            }
+//        }
 
         if (tab != currentTab && currentFragment != null) {
             transaction.hide(currentFragment)

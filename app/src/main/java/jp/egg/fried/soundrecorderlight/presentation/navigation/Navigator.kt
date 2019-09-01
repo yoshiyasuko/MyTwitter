@@ -1,4 +1,4 @@
-package jp.egg.fried.soundrecorderlight.presentation.presenter.navigation
+package jp.egg.fried.soundrecorderlight.presentation.navigation
 
 import android.content.Context
 import com.google.android.material.bottomnavigation.BottomNavigationView

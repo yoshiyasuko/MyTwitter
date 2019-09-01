@@ -1,4 +1,4 @@
-package jp.egg.fried.soundrecorderlight.presentation.view.fragment.navigation
+package jp.egg.fried.soundrecorderlight.presentation.view.navigation
 
 import android.content.Context
 import androidx.databinding.DataBindingUtil
@@ -10,10 +10,10 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import jp.egg.fried.soundrecorderlight.R
 import jp.egg.fried.soundrecorderlight.databinding.FragmentNavigationBinding
-import jp.egg.fried.soundrecorderlight.presentation.presenter.navigation.Navigator
-import jp.egg.fried.soundrecorderlight.presentation.view.fragment.file.FileFragment
-import jp.egg.fried.soundrecorderlight.presentation.view.fragment.record.RecordFragment
-import jp.egg.fried.soundrecorderlight.presentation.view.fragment.setting.SettingFragment
+import jp.egg.fried.soundrecorderlight.presentation.navigation.Navigator
+import jp.egg.fried.soundrecorderlight.presentation.view.file.FileFragment
+import jp.egg.fried.soundrecorderlight.presentation.view.record.RecordFragment
+import jp.egg.fried.soundrecorderlight.presentation.view.setting.SettingFragment
 import jp.egg.fried.soundrecorderlight.utility.extension.navigator
 import java.io.Serializable
 
@@ -87,7 +87,7 @@ class NavigationFragment : Fragment() {
         onFragmentPause(currentFragment)
 
         val transaction = childFragmentManager.beginTransaction()
-        transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right)
+//        transaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right)
         // トランジションアニメーションは使わない
         fragment.enterTransition = null
         currentFragment?.enterTransition = null

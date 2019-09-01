@@ -1,10 +1,10 @@
-package jp.egg.fried.soundrecorderlight.presentation.view.activity
+package jp.egg.fried.soundrecorderlight.presentation.view.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import jp.egg.fried.soundrecorderlight.R
-import jp.egg.fried.soundrecorderlight.presentation.presenter.navigation.Navigator
-import jp.egg.fried.soundrecorderlight.presentation.presenter.navigation.NavigatorImpl
+import jp.egg.fried.soundrecorderlight.presentation.navigation.Navigator
+import jp.egg.fried.soundrecorderlight.presentation.navigation.NavigatorImpl
 
 class MainActivity : AppCompatActivity()
         , Navigator.HasNavigator{
