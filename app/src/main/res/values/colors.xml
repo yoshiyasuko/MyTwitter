@@ -11,6 +11,7 @@
     <color name="borderLine">#C9CBCD</color>
     <color name="clear">#00000000</color>
     <color name="darkBlue">#003057</color>
+    <color name="lightBlue">#9BCBEB</color>
     <color name="darkGray">#5F646A</color>
     <color name="darkGrayText">#7A7F83</color>
     <color name="gradientBottom">#66000000</color>
